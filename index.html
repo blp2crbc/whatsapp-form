@@ -3,55 +3,171 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WhatsApp Message Formatter</title>
+  <title>OSH Observation Reporter</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; padding: 20px; background-color: #f4f4f9; }
-    .container { max-width: 450px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin: auto; }
-    h2 { text-align: center; color: #075e54; margin-bottom: 20px; }
-    label { font-weight: bold; font-size: 14px; display: block; margin-top: 10px; }
-    input, textarea, select { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; font-size: 14px; }
-    button { width: 100%; background-color: #25D366; color: white; padding: 12px; border: none; border-radius: 5px; font-weight: bold; font-size: 16px; margin-top: 20px; cursor: pointer; }
-    button:active { background-color: #1ebc57; }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+      padding: 15px; 
+      background-color: #f4f4f9; 
+    }
+    .container { 
+      max-width: 500px; 
+      background: white; 
+      padding: 20px; 
+      border-radius: 10px; 
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+      margin: auto; 
+    }
+    h2 { 
+      text-align: center; 
+      color: #075e54; 
+      font-size: 18px;
+      margin-bottom: 20px; 
+      line-height: 1.3;
+    }
+    label { 
+      font-weight: bold; 
+      font-size: 13px; 
+      display: block; 
+      margin-top: 12px; 
+      color: #333;
+    }
+    input, textarea, select { 
+      width: 100%; 
+      padding: 10px; 
+      margin-top: 5px; 
+      border: 1px solid #ccc; 
+      border-radius: 6px; 
+      box-sizing: border-box; 
+      font-size: 14px; 
+    }
+    button { 
+      width: 100%; 
+      background-color: #25D366; 
+      color: white; 
+      padding: 14px; 
+      border: none; 
+      border-radius: 6px; 
+      font-weight: bold; 
+      font-size: 16px; 
+      margin-top: 20px; 
+      cursor: pointer; 
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    button:active { 
+      background-color: #1ebc57; 
+    }
   </style>
 </head>
 <body>
 
 <div class="container">
-  <h2>WhatsApp Form</h2>
+  <h2>🦺 UNSAFE ACT / UNSAFE CONDITION / GOOD PRACTICE FORM</h2>
   
-  <label for="reporter">Submitted By:</label>
-  <input type="text" id="reporter" placeholder="Enter name...">
+  <label for="section">Section:</label>
+  <input type="text" id="section" value="BLP2">
 
-  <label for="location">Location / Zone:</label>
-  <input type="text" id="location" placeholder="Enter location...">
+  <label for="location">Location:</label>
+  <select id="location">
+    <option value="Project Site Office">Project Site Office</option>
+    <option value="SM08 TT3">SM08 TT3</option>
+    <option value="SM08 Stutong Indah">SM08 Stutong Indah</option>
+    <option value="SM08 Wan Alwi">SM08 Wan Alwi</option>
+    <option value="SM08 Jln Setia Raja Island">SM08 Jln Setia Raja Island</option>
+    <option value="SM08 Eversie">SM08 Eversie</option>
+    <option value="SM09 80m Long Span">SM09 80m Long Span</option>
+    <option value="SM09 100m Long Span">SM09 100m Long Span</option>
+    <option value="SM09 Viva City Mall">SM09 Viva City Mall</option>
+    <option value="SM09 Arena Sukan (Median)">SM09 Arena Sukan (Median)</option>
+    <option value="SM09 Aion - Awi Builder">SM09 Aion - Awi Builder</option>
+    <option value="SM10/SR10 Simpang Tiga (Interchange)">SM10/SR10 Simpang Tiga (Interchange)</option>
+    <option value="SM11 The Spring P1">SM11 The Spring P1</option>
+    <option value="SM11 The Spring P2">SM11 The Spring P2</option>
+    <option value="SM11 The Spring P3">SM11 The Spring P3</option>
+    <option value="SM11 The Spring P4">SM11 The Spring P4</option>
+    <option value="SM12 JKR">SM12 JKR</option>
+    <option value="SM12 Batu Lintang">SM12 Batu Lintang</option>
+    <option value="SM12 Bukit Hantu">SM12 Bukit Hantu</option>
+    <option value="SM13 Sarawak General Hospital">SM13 Sarawak General Hospital</option>
+    <option value="SM14 Hikmah Exchange">SM14 Hikmah Exchange</option>
+    <option value="Casting Yard">Casting Yard</option>
+  </select>
 
-  <label for="details">Details / Remarks:</label>
-  <textarea id="details" rows="4" placeholder="Type report details here..."></textarea>
+  <label for="type">Type:</label>
+  <select id="type">
+    <option value="UA (Unsafe Act)">UA (Unsafe Act)</option>
+    <option value="UC (Unsafe Condition)">UC (Unsafe Condition)</option>
+    <option value="GP (Good Practice)">GP (Good Practice)</option>
+  </select>
+
+  <label for="subhazard">Sub-Hazard:</label>
+  <input type="text" id="subhazard" placeholder="e.g. UC9 Inadequate Guards/Devices">
+
+  <label for="pic">PIC:</label>
+  <input type="text" id="pic" placeholder="e.g. Wang Ze Hong @王泽宏 CRBC">
+
+  <label for="company">Company:</label>
+  <input type="text" id="company" placeholder="e.g. CRBC">
+
+  <label for="datetime">Date & Time:</label>
+  <input type="text" id="datetime">
+
+  <label for="issuedby">Issued by:</label>
+  <input type="text" id="issuedby" placeholder="e.g. Patrick">
+
+  <label for="observation">🔍 Observation:</label>
+  <textarea id="observation" rows="3" placeholder="Describe the observation..."></textarea>
+
+  <label for="recommendation">✅ Recommendation / Action Taken:</label>
+  <textarea id="recommendation" rows="3" placeholder="Describe the action taken or required..."></textarea>
 
   <button onclick="copyToClipboard()">📋 Copy Text for WhatsApp</button>
 </div>
 
 <script>
+// Auto-fill Date & Time on load
+window.onload = function() {
+  const now = new Date();
+  const options = { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false };
+  const formattedDate = now.toLocaleDateString('en-GB', options).replace(',', ' at');
+  document.getElementById('datetime').value = formattedDate;
+};
+
 function copyToClipboard() {
-  const reporter = document.getElementById('reporter').value;
+  const section = document.getElementById('section').value;
   const location = document.getElementById('location').value;
-  const details = document.getElementById('details').value;
+  const type = document.getElementById('type').value;
+  const subhazard = document.getElementById('subhazard').value;
+  const pic = document.getElementById('pic').value;
+  const company = document.getElementById('company').value;
+  const datetime = document.getElementById('datetime').value;
+  const issuedby = document.getElementById('issuedby').value;
+  const observation = document.getElementById('observation').value;
+  const recommendation = document.getElementById('recommendation').value;
 
-  if(!reporter && !location && !details) {
-    alert("Please fill in at least one field!");
-    return;
-  }
+  // Construct formatted text matching your exact layout
+  const formattedText = 
+`🦺 *UNSAFE ACT UNSAFE CONDITION / GOOD PRACTICE FORM*
+━━━━━━━━━━━━━━━━━━
+*Section:* ${section}
+*Location:* ${location}
+*Type:* ${type}
+*Sub-Hazard:* ${subhazard}
+*PIC:* ${pic}
+*Company:* ${company}
+*Date & Time:* ${datetime}
+*Issued by:* ${issuedby}
 
-  const formattedText = `*DAILY REPORT*\n\n` +
-                        `*Submitted By:* ${reporter}\n` +
-                        `*Location:* ${location}\n` +
-                        `*Details:* ${details}\n\n` +
-                        `_Sent via WhatsApp Form_`;
+🔍 *Observation:*
+${observation}
+
+✅ *Recommendation / Action Taken:*
+${recommendation}`;
 
   navigator.clipboard.writeText(formattedText).then(() => {
-    alert("Text copied to clipboard! Open WhatsApp and paste into your group.");
+    alert("Copied to clipboard! Switch to WhatsApp and paste.");
   }).catch(err => {
-    alert("Copying failed. Please copy manually.");
+    alert("Failed to copy automatically. Please copy manually.");
   });
 }
 </script>
