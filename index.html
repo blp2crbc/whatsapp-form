@@ -62,7 +62,7 @@
 <body>
 
 <div class="container">
-  <h2>🦺 UNSAFE ACT / UNSAFE CONDITION / GOOD PRACTICE FORM</h2>
+  <h2>🦺 UNSAFE ACT UNSAFE CONDITION / GOOD PRACTICE FORM</h2>
   
   <label for="section">Section:</label>
   <input type="text" id="section" value="BLP2">
@@ -101,7 +101,58 @@
   </select>
 
   <label for="subhazard">Sub-Hazard:</label>
-  <input type="text" id="subhazard" placeholder="e.g. UC9 Inadequate Guards/Devices">
+  <select id="subhazard">
+    <optgroup label="--- Unsafe Acts (UA) ---">
+      <option value="UA1 Failure to Follow Procedure">UA1 Failure to Follow Procedure</option>
+      <option value="UA2 Failure to Make Secure">UA2 Failure to Make Secure</option>
+      <option value="UA3 Failure to Warn or Signal">UA3 Failure to Warn or Signal</option>
+      <option value="UA4 Horseplay">UA4 Horseplay</option>
+      <option value="UA5 Littering">UA5 Littering</option>
+      <option value="UA6 No/Inadequate Supervision">UA6 No/Inadequate Supervision</option>
+      <option value="UA7 Open Burning">UA7 Open Burning</option>
+      <option value="UA8 Operating at Unsafe Speed">UA8 Operating at Unsafe Speed</option>
+      <option value="UA9 Operating Without Authority">UA9 Operating Without Authority</option>
+      <option value="UA10 Override/Bypass Safety Devices">UA10 Override/Bypass Safety Devices</option>
+      <option value="UA11 PPE Non Compliance">UA11 PPE Non Compliance</option>
+      <option value="UA12 Quarrel/Fighting">UA12 Quarrel/Fighting</option>
+      <option value="UA13 Scheduled Waste Dumping">UA13 Scheduled Waste Dumping</option>
+      <option value="UA14 Servicing Equipment in Operation">UA14 Servicing Equipment in Operation</option>
+      <option value="UA15 Short Cut">UA15 Short Cut</option>
+      <option value="UA16 Smoking Outside of Smoking Zone">UA16 Smoking Outside of Smoking Zone</option>
+      <option value="UA17 Taking Unsafe Position">UA17 Taking Unsafe Position</option>
+      <option value="UA18 Unauthorized Riding of Equipment">UA18 Unauthorized Riding of Equipment</option>
+      <option value="UA19 Unsafe Use of Equipment/Tools">UA19 Unsafe Use of Equipment/Tools</option>
+      <option value="UA20 Using Defective Equipment">UA20 Using Defective Equipment</option>
+      <option value="UA21 Using Improper Equipment/Tools">UA21 Using Improper Equipment/Tools</option>
+      <option value="UA22 Wrong Instruction">UA22 Wrong Instruction</option>
+      <option value="UA23 Others">UA23 Others</option>
+    </optgroup>
+    <optgroup label="--- Unsafe Conditions (UC) ---">
+      <option value="UC1 Adverse Environmental Condition">UC1 Adverse Environmental Condition</option>
+      <option value="UC2 Congestion/Obstruction">UC2 Congestion/Obstruction</option>
+      <option value="UC3 Defective Equipment/Tools">UC3 Defective Equipment/Tools</option>
+      <option value="UC4 Excessive Noise">UC4 Excessive Noise</option>
+      <option value="UC5 Excessive Temperature">UC5 Excessive Temperature</option>
+      <option value="UC6 Fire and Explosion Hazards">UC6 Fire and Explosion Hazards</option>
+      <option value="UC7 Improper Personnel Attire/PPE">UC7 Improper Personnel Attire/PPE</option>
+      <option value="UC8 Improper Placement/Storage">UC8 Improper Placement/Storage</option>
+      <option value="UC9 Inadequate Guards/Devices">UC9 Inadequate Guards/Devices</option>
+      <option value="UC10 Inadequate Lighting">UC10 Inadequate Lighting</option>
+      <option value="UC11 Inadequate Maintenance/Inspection">UC11 Inadequate Maintenance/Inspection</option>
+      <option value="UC12 Inadequate Ventilation">UC12 Inadequate Ventilation</option>
+      <option value="UC13 Inadequate Warning Sign">UC13 Inadequate Warning Sign</option>
+      <option value="UC14 Inadequate/No Procedure">UC14 Inadequate/No Procedure</option>
+      <option value="UC15 Lack of Emergency Preparedness">UC15 Lack of Emergency Preparedness</option>
+      <option value="UC16 Oil / Chemical Spillage">UC16 Oil / Chemical Spillage</option>
+      <option value="UC17 Poor Housekeeping">UC17 Poor Housekeeping</option>
+      <option value="UC18 Protrusion Hazard">UC18 Protrusion Hazard</option>
+      <option value="UC19 Slippery Working Area">UC19 Slippery Working Area</option>
+      <option value="UC20 Others">UC20 Others</option>
+    </optgroup>
+    <optgroup label="--- Good Practice ---">
+      <option value="Good Practice">Good Practice</option>
+    </optgroup>
+  </select>
 
   <label for="pic">PIC:</label>
   <input type="text" id="pic" placeholder="e.g. Wang Ze Hong @王泽宏 CRBC">
