@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BLP2 – UAUC & GP REPORT</title>
+  <title>OSH Observation Reporter</title>
   <style>
     body { 
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
@@ -75,6 +75,7 @@
     <option value="SM08 Wan Alwi">SM08 Wan Alwi</option>
     <option value="SM08 Jln Setia Raja Island">SM08 Jln Setia Raja Island</option>
     <option value="SM08 Eversie">SM08 Eversie</option>
+    <option value="SM08 Emart">SM08 Emart</option>
     <option value="SM09 80m Long Span">SM09 80m Long Span</option>
     <option value="SM09 100m Long Span">SM09 100m Long Span</option>
     <option value="SM09 Viva City Mall">SM09 Viva City Mall</option>
@@ -167,6 +168,7 @@
   <select id="issuedby">
     <option value="Patrick">Patrick</option>
     <option value="Lim Kim Siang">Lim Kim Siang</option>
+    <option value="SHAFIQ HAIMY">SHAFIQ HAIMY</option>
     <option value="Brendan Lim">Brendan Lim</option>
     <option value="Andreas">Andreas</option>
     <option value="Femielia">Femielia</option>
@@ -209,28 +211,7 @@ function copyToClipboard() {
   const formattedText = 
 `🦺 *UNSAFE ACT UNSAFE CONDITION / GOOD PRACTICE FORM*
 ━━━━━━━━━━━━━━━━━━
-*Section:* ${section}
-*Location:* ${location}
-*Type:* ${type}
-*Sub-Hazard:* ${subhazard}
-*PIC:* ${pic}
-*Company:* ${company}
-*Date & Time:* ${datetime}
-*Issued by:* ${issuedby}
-
-🔍 *Observation:*
-${observation}
-
-✅ *Recommendation / Action Taken:*
-${recommendation}`;
-
-  navigator.clipboard.writeText(formattedText).then(() => {
-    alert("Copied to clipboard! Switch to WhatsApp and paste.");
-  }).catch(err => {
-    alert("Failed to copy automatically. Please copy manually.");
-  });
-}
-</script>
-
-</body>
-</html>
+*Section:* \${section}
+*Location:* \${location}
+*Type:* \${type}
+*Sub-Hazard:* \${sub
