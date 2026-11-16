@@ -211,7 +211,28 @@ function copyToClipboard() {
   const formattedText = 
 `🦺 *UNSAFE ACT UNSAFE CONDITION / GOOD PRACTICE FORM*
 ━━━━━━━━━━━━━━━━━━
-*Section:* \${section}
-*Location:* \${location}
-*Type:* \${type}
-*Sub-Hazard:* \${sub
+*Section:* ${section}
+*Location:* ${location}
+*Type:* ${type}
+*Sub-Hazard:* ${subhazard}
+*PIC:* ${pic}
+*Company:* ${company}
+*Date & Time:* ${datetime}
+*Issued by:* ${issuedby}
+
+🔍 *Observation:*
+${observation}
+
+✅ *Recommendation / Action Taken:*
+${recommendation}`;
+
+  navigator.clipboard.writeText(formattedText).then(() => {
+    alert("Copied to clipboard! Switch to WhatsApp and paste.");
+  }).catch(err => {
+    alert("Failed to copy automatically. Please copy manually.");
+  });
+}
+</script>
+
+</body>
+</html>
